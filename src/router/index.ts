@@ -6,8 +6,16 @@ const init_router = () => {
     routes: [
       {
         path: "/",
-        component: () => import("@/views/Chat/Chat.vue"),
-        name: "chat",
+        component: () => import("@/drawer/index.vue"),
+        name: "drawer",
+        redirect:'/chat',
+        children:[
+          {
+            path:'chat',
+            component:()=>import('@/views/Chat/Chat.vue'),
+            name:'chat'
+          }
+        ]
       },
     ],
   });
