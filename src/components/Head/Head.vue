@@ -7,7 +7,7 @@ import EditIcon from "@/assets/icons/edit.svg?component";
 <template>
   <div class="navbar bg-base-100">
     <div class="navbar-start">
-      <div class="flex-none lg:hidden">
+      <div class="flex-none md:hidden">
         <label
           for="drawer"
           aria-label="open sidebar"
@@ -28,7 +28,7 @@ import EditIcon from "@/assets/icons/edit.svg?component";
           </svg>
         </label>
       </div>
-      <div class="tooltip tooltip-bottom" data-tip="新建对话">
+      <div class="tooltip tooltip-right" data-tip="新建对话">
         <button class="btn btn-ghost btn-circle">
           <EditIcon />
         </button>
@@ -41,7 +41,7 @@ import EditIcon from "@/assets/icons/edit.svg?component";
         </div>
         <ul
           tabindex="0"
-          class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 left-1/2 translate-x-[-50%]"
+          class="dropdown-content menu bg-base-100 border-[1px]  rounded-box z-[1] w-52 p-2 left-1/2 translate-x-[-50%]"
         >
           <li><a>Item 1</a></li>
           <li><a>Item 2</a></li>
@@ -52,7 +52,7 @@ import EditIcon from "@/assets/icons/edit.svg?component";
       <ToggleTheme />
 
       <div class="dropdown dropdown-end">
-        <div tabindex="0" role="button" class="avatar online ml-2">
+        <div tabindex="0" role="button" class="avatar ml-2">
           <div class="w-10 rounded-full cursor-pointer">
             <img
               src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
@@ -61,10 +61,9 @@ import EditIcon from "@/assets/icons/edit.svg?component";
         </div>
         <ul
           tabindex="0"
-          class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow"
+          class="dropdown-content border-[1px] menu bg-base-100 rounded-box z-[1] w-max shadow-sm"
         >
-          <li><a>Item 1</a></li>
-          <li><a>Item 2</a></li>
+          <li><a>退出登录</a></li>
         </ul>
       </div>
     </div>

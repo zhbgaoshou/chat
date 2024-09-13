@@ -9,4 +9,8 @@
 #app{
     margin: auto;
     max-width: 980px;
+    border-left: 1px solid #ccc;
+    border-right:  1px solid #ccc;
 }
+
+

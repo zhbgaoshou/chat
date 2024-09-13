@@ -10,20 +10,17 @@ const textarea = ref("");
 <template>
   <form
     @submit="(e) => e.preventDefault()"
-    class="p-3 relative flex items-center"
+    class="join p-3"
   >
     <textarea
       v-model="textarea"
-      class="textarea textarea-bordered w-full resize-none !outline-0 rounded-full h-0"
-      placeholder="Bio"
+      class="textarea rounded-l-full bg-base-200 textarea-bordered w-full resize-none !outline-0 border-none join-item h-0"
+      placeholder="想问点什么..."
     >
     </textarea>
 
-    <div class="absolute right-[20px] flex items-center">
-      <FolderIcon class="w-50 h-50" />
-      <button class="btn btn-circle btn-sm">
-        <SendIcon />
+      <button class="btn btn-circle join-item rounded-r-full shadow-none">
+        <SendIcon class="w-[25px]"/>
       </button>
-    </div>
   </form>
 </template>
