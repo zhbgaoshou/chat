@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#app,body,html{
+    height: 100%;;
+}
+
+#app{
+    margin: auto;
+    max-width: 980px;
+}
