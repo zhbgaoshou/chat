@@ -9,12 +9,13 @@ import Message from "./Message.vue";
     <Head />
     <div class="overflow-auto flex-1 px-4">
       <Message />
+      <!-- 生成中 -->
       <div class="chat chat-start">
-        <div class="chat-bubble flex justify-center items-center ">
-          <span class="loading loading-infinity loading-md"></span>
+        <div class="chat-bubble flex justify-center items-center">
+          <span class="loading loading-dots loading-md"></span>
         </div>
         <div class="chat-footer opacity-50">正在寻找最佳方案...</div>
-    </div>
+      </div>
     </div>
     <Footer />
   </div>
