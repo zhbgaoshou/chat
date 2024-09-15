@@ -2,7 +2,7 @@
 import DrawerSide from "./DrawerSide.vue";
 </script>
 <template>
-  <div class="drawer h-full md:drawer-open">
+  <div id="layout" class="drawer h-full md:drawer-open transition-all">
     <input id="drawer" type="checkbox" class="drawer-toggle" />
     <div class="drawer-content min-h-0">
       <!-- Page content here -->

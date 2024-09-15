@@ -1,4 +1,5 @@
 <script setup lang="ts">
+// store
 import { useSettingsStore } from "@/store/modules/settings";
 
 const settingsStore = useSettingsStore();

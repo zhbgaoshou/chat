@@ -36,9 +36,6 @@ const router = useRouter();
               class="input input-bordered !outline-none"
               required
             />
-            <label class="label">
-              <a href="#" class="label-text-alt link link-hover">忘记密码?</a>
-            </label>
           </div>
           <div class="form-control">
             <label class="label">

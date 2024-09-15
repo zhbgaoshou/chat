@@ -13,6 +13,7 @@ const router = useRouter();
           平台致力于通过先进的人工智能技术，让每个人都能更轻松地获取信息、解决问题、激发创造力。
         </p>
       </div>
+
       <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
         <form @click="(e) => e.preventDefault()" class="card-body">
           <div class="form-control">

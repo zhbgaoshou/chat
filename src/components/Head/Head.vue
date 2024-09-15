@@ -11,6 +11,11 @@ import LoginIcon from "@/assets/icons/login.svg?component";
 import InfoIcon from "@/assets/icons/info.svg?component";
 import MoreLeftIcon from "@/assets/icons/more-left.svg?component";
 
+// store
+import { useSettingsStore } from "@/store/modules/settings";
+
+const settingsStore = useSettingsStore();
+
 const router = useRouter();
 </script>
 
@@ -71,18 +76,29 @@ const router = useRouter();
     </div>
     <!-- Head right -->
     <div class="navbar-end">
-      <div class="dropdown dropdown-end">
+      <div class="dropdown dropdown-end mx-[5px]">
         <div tabindex="0" role="button" class="btn btn-circle btn-ghost">
           <SettingIcon />
         </div>
         <ul
           tabindex="0"
-          class="dropdown-content menu bg-base-100 border-[1px] border-base-300 rounded-box z-[1] w-52 p-2 shadow"
+          class="dropdown-content menu bg-base-100 border-[1px] border-base-300 rounded-box z-[1] w-60 p-2 shadow"
         >
           <li>
             <a class="flex justify-between">
               暗夜模式
               <ToggleTheme />
+            </a>
+          </li>
+
+          <li>
+            <a class="flex justify-between">
+              全屏宽
+              <input
+                type="checkbox"
+                class="toggle toggle-info"
+                v-model="settingsStore.width"
+              />
             </a>
           </li>
         </ul>
