@@ -1,19 +1,23 @@
 <script setup>
 import DrawerSide from "./DrawerSide.vue";
+
+// store
+import { useSettingsStore } from "@/store/modules/settings";
+
+const settingsStore = useSettingsStore();
+
+console.log(settingsStore);
+
 </script>
 <template>
-  <div id="layout" class="drawer h-full md:drawer-open transition-all">
+  <div id="layout" class="drawer h-full md:drawer-open transition-all" :class="settingsStore.isFullScreen ? 'max-w-full' : 'max-w-[980px]'">
     <input id="drawer" type="checkbox" class="drawer-toggle" />
     <div class="drawer-content min-h-0">
       <!-- Page content here -->
       <router-view />
     </div>
     <div class="drawer-side z-10">
-      <label
-        for="drawer"
-        aria-label="close sidebar"
-        class="drawer-overlay"
-      ></label>
+      <label for="drawer" aria-label="close sidebar" class="drawer-overlay"></label>
 
       <DrawerSide />
     </div>

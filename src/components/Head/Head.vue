@@ -97,7 +97,7 @@ const router = useRouter();
               <input
                 type="checkbox"
                 class="toggle toggle-info"
-                v-model="settingsStore.width"
+                v-model="settingsStore.isFullScreen"
               />
             </a>
           </li>
@@ -137,8 +137,9 @@ const router = useRouter();
 
           <!-- 未登录 -->
           <div v-else>
-            <span class="flex justify-center items-center">
-              <InfoIcon class="w-[16px] mr-[3px]" />没有登录
+            <span class="flex flex-col justify-center items-center">
+              <InfoIcon class="w-[16px] mr-[3px]" />
+              没有登录
             </span>
             <div class="divider">OR</div>
             <button class="btn btn-sm" @click="router.replace('/login')">
