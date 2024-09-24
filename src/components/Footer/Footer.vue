@@ -15,7 +15,7 @@ const textarea = ref("");
       placeholder="想问点什么..."
     >
     </textarea>
-    <button class="btn btn-circle join-item rounded-r-full shadow-none">
+    <button class="btn btn-circle join-item rounded-r-full shadow-none w-[64px]">
       <SendIcon class="w-[25px]" />
     </button>
   </form>

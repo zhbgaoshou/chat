@@ -1,20 +1,19 @@
 <script setup lang="ts">
-import Head from "@/components/Head/Head.vue";
 import Footer from "@/components/Footer/Footer.vue";
 import Message from "./Message.vue";
 </script>
 
 <template>
-  <div class="flex flex-col h-full justify-between">
-    <Head />
-    <div class="overflow-auto flex-1 px-4">
-      <Message />
-      <!-- 生成中 -->
-      <div class="chat chat-start">
-        <div class="chat-bubble flex justify-center items-center">
-          <span class="loading loading-dots loading-md"></span>
+  <div class="flex flex-col min-h-0 flex-1 justify-between">
+    <div class="flex-1 min-h-0 flex">
+      <div class="flex-1 overflow-auto">
+        <Message />
+        <!-- 生成中 -->
+        <div class="chat chat-start">
+          <div class="chat-bubble flex justify-center items-center">
+            <span class="loading loading-dots loading-md"></span>
+          </div>
         </div>
-        <div class="chat-footer opacity-50">正在寻找最佳方案...</div>
       </div>
     </div>
     <Footer />
