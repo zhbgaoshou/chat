@@ -21,7 +21,7 @@ import DleftIcon from "@/assets/icons/d_left.svg?component";
       <!-- 会话记录 -->
       <label
         for="my-drawer"
-        class="drawer-button btn btn-circle btn-sm absolute right-1 z-[1]"
+        class="drawer-button no-animation btn btn-circle btn-sm absolute right-1 z-[1]"
       >
         <DleftIcon />
       </label>
