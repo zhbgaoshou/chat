@@ -8,7 +8,9 @@ const sidebarList = [
 ];
 </script>
 <template>
-  <ul class="menu bg-base-100 flex flex-col h-full border-r-[2px] border-base-300">
+  <ul
+    class="menu bg-base-100 !m-0 flex flex-col h-full border-r-[1px] border-base-300"
+  >
     <!-- Sidebar content here -->
     <li>
       <a v-for="item in sidebarList">
@@ -24,7 +26,6 @@ const sidebarList = [
         CHATGPT
       </a>
     </li>
-
   </ul>
 </template>
 

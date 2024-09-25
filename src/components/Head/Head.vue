@@ -18,7 +18,6 @@ const settingsStore = useSettingsStore();
 
 const router = useRouter();
 const route = useRoute();
-
 </script>
 
 <template>
@@ -26,18 +25,29 @@ const route = useRoute();
     <!-- Head left -->
     <div class="navbar-start">
       <div class="flex-none md:hidden">
-        <label for="drawer" aria-label="open sidebar" class="btn btn-ghost btn-circle">
+        <label
+          for="drawer"
+          aria-label="open sidebar"
+          class="btn btn-ghost btn-circle"
+        >
           <MoreLeftIcon />
         </label>
       </div>
 
       <!-- 切换模型 -->
       <div v-show="route.path === '/chat'" class="dropdown">
-        <div tabindex="0" role="button" class="btn m-1 btn-ghost rounded-box">ChatGPT 4o
+        <div
+          tabindex="0"
+          role="button"
+          class="btn m-1 btn-sm btn-ghost rounded-box w-max"
+        >
+          ChatGPT 4o
           <DownIcon />
         </div>
-        <ul tabindex="0"
-          class="dropdown-content menu bg-base-100 border-[1px] border-base-300 rounded-box z-[1] w-max p-2 shadow">
+        <ul
+          tabindex="0"
+          class="dropdown-content menu bg-base-100 border-[1px] border-base-300 rounded-box z-[1] w-max p-2 shadow"
+        >
           <li><a>ChatGPT 4o</a></li>
           <li><a>ChatGPT 4</a></li>
           <li><a>ChatGPT 4o mini</a></li>
@@ -46,17 +56,17 @@ const route = useRoute();
     </div>
 
     <!-- Head center -->
-    <div class="navbar-center">
-
-    </div>
+    <div class="navbar-center"></div>
     <!-- Head right -->
     <div class="navbar-end">
       <div class="dropdown dropdown-end mx-[5px]">
-        <div tabindex="0" role="button" class="btn btn-circle btn-ghost">
-          <SettingIcon />
+        <div tabindex="0" role="button" class="btn btn-circle btn-ghost btn-sm">
+          <SettingIcon class="w-[18px]" />
         </div>
-        <ul tabindex="0"
-          class="dropdown-content menu bg-base-100 border-[1px] border-base-300 rounded-box z-[1] w-60 p-2 shadow">
+        <ul
+          tabindex="0"
+          class="dropdown-content menu bg-base-100 border-[1px] border-base-300 rounded-box z-[1] w-60 p-2 shadow"
+        >
           <li>
             <a class="flex justify-between">
               暗夜模式
@@ -67,24 +77,38 @@ const route = useRoute();
           <li class="hidden md:block">
             <a class="flex justify-between">
               全屏宽
-              <input type="checkbox" class="toggle toggle-info" v-model="settingsStore.isFullScreen" />
+              <input
+                type="checkbox"
+                class="toggle toggle-info"
+                v-model="settingsStore.isFullScreen"
+              />
             </a>
           </li>
         </ul>
       </div>
 
       <div class="dropdown dropdown-end">
-        <div tabindex="0" role="button" class="btn btn-circle btn-md">头像</div>
-        <ul tabindex="0"
-          class="dropdown-content border-base-300 border-[1px] menu bg-base-100 rounded-box z-[1] w-[180px] shadow-sm">
+        <div tabindex="0" role="button" class="btn btn-circle btn-sm">
+          <div class="avatar placeholder">
+            <div class="bg-neutral text-neutral-content w-8 rounded-full">
+              <span class="text-xs">朱</span>
+            </div>
+          </div>
+        </div>
+        <ul
+          tabindex="0"
+          class="dropdown-content border-base-300 border-[1px] menu bg-base-100 rounded-box z-10 w-max shadow-sm"
+        >
           <!-- 已登陆 -->
           <div v-if="false">
             <div class="stats stats-vertical">
               <div class="stat">
                 <div class="stat-figure text-secondary">
-                  <div class="avatar online">
-                    <div class="w-16 rounded-full">
-                      <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                  <div class="avatar online placeholder">
+                    <div
+                      class="bg-neutral text-neutral-content w-16 rounded-full"
+                    >
+                      <span class="text-xl">AI</span>
                     </div>
                   </div>
                 </div>
@@ -108,7 +132,10 @@ const route = useRoute();
             </span>
             <div class="divider">OR</div>
             <div class="flex justify-end mb-[5px]">
-              <button class="btn btn-sm w-full" @click="router.replace('/login')">
+              <button
+                class="btn btn-sm w-full"
+                @click="router.replace('/login')"
+              >
                 登录
                 <LoginIcon class="w-[18px]" />
               </button>

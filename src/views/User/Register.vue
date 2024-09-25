@@ -48,7 +48,7 @@ const router = useRouter();
             />
           </div>
           <!-- 按钮组 -->
-          <div class="form-control">
+          <div class="form-control mt-1">
             <button class="btn btn-info flex-1 rounded-full">注册</button>
             <div class="divider text-sm">已经有账号？</div>
             <button
