@@ -19,10 +19,7 @@ import DleftIcon from "@/assets/icons/d_left.svg?component";
       </div>
 
       <!-- 会话记录 -->
-      <label
-        for="my-drawer"
-        class="drawer-button no-animation btn btn-circle btn-sm absolute right-1 z-[1]"
-      >
+      <label for="my-drawer" class="drawer-button rounded-tl-lg rounded-bl-lg rounded-none px-1  btn  btn-sm absolute right-0 z-[1]">
         <DleftIcon />
       </label>
 
@@ -32,7 +29,7 @@ import DleftIcon from "@/assets/icons/d_left.svg?component";
         <div class="drawer-content"></div>
 
         <div class="drawer-side absolute w-[180px] h-full ms-[-180px]">
-          <ul class="menu bg-base-200 h-full w-[160px] rounded-box">
+          <ul class="menu bg-base-200 h-full w-[160px] rounded-tl-box rounded-bl-box">
             <li class="menu-title">今天</li>
             <li><a>Item 1</a></li>
             <li><a>Item 2</a></li>
